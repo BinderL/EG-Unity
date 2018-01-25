@@ -15,8 +15,8 @@ MonoBehaviour:
     vuforiaLicenseKey: 
     delayedInitialization: 0
     cameraDeviceModeSetting: -1
-    maxSimultaneousImageTargets: 1
-    maxSimultaneousObjectTargets: 1
+    maxSimultaneousImageTargets: 15
+    maxSimultaneousObjectTargets: 15
     useDelayedLoadingObjectTargets: 0
     cameraDirection: 0
     mirrorVideoBackground: 0
@@ -43,8 +43,10 @@ MonoBehaviour:
       FieldOfView: {x: 0, y: 0, z: 0, w: 0}
       ContainsMagnet: 0
   databaseLoad:
-    dataSetsToLoad: []
-    dataSetsToActivate: []
+    dataSetsToLoad:
+    - QRcodes
+    dataSetsToActivate:
+    - QRcodes
   videoBackground:
     clippingMode: 0
     matteShader: {fileID: 0}
