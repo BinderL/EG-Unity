@@ -65,6 +65,6 @@ MonoBehaviour:
     modelTransform: {x: 0, y: 0.1, z: -0.1}
   webcam:
     deviceNameSetInEditor: 
-    flipHorizontally: 1
+    flipHorizontally: 0
     turnOffWebCam: 0
     renderTextureLayer: 30

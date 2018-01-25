@@ -3,24 +3,30 @@ using System.Collections.Generic;
 using UnityEngine;
 using Vuforia;
 
-public class vb_anim_capsule : MonoBehaviour, IVirtualButtonEventHandler {
+public class vb_anim_leaf : MonoBehaviour, IVirtualButtonEventHandler {
 
 	public GameObject vbBtnObjLeaf;
-	public Animator capsuleAni;
+	public Animator chesttopAni;
+
+	public bool active;
 
 
 	void Start () {
 		vbBtnObjLeaf = GameObject.Find ("Leafbtn");
 		vbBtnObjLeaf.GetComponent<VirtualButtonBehaviour> ().RegisterEventHandler (this);
-		capsuleAni.GetComponent<Animator> ();
+		chesttopAni.GetComponent<Animator> ();
+		active = false;
 	}
 
 	public void OnButtonPressed(VirtualButtonAbstractBehaviour vb){
-		capsuleAni.Play ("capsule_animation");
-		Debug.Log ("ON_CAPSULE");
+		if (active == false) {
+			chesttopAni.Play ("chesttop_animation");
+			active = true;
+		}
+		Debug.Log ("ON_SHIELD");
 	}
 	public void OnButtonReleased(VirtualButtonAbstractBehaviour vb){
-		capsuleAni.Play ("none");
-		Debug.Log ("OFF_CAPSULE");
+		//chesttopAni.Play ("none");
+		Debug.Log ("OFF_SHIELD");
 	}
 }
