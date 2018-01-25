@@ -5,13 +5,13 @@ using Vuforia;
 
 public class vb_anim : MonoBehaviour, IVirtualButtonEventHandler {
 
-	public GameObject vbBtnObj;
+	public GameObject vbBtnObjNatoo;
 	public Animator ballAni;
 
 	// Use this for initialization
 	void Start () {
-		vbBtnObj = GameObject.Find ("Natoobtn");
-		vbBtnObj.GetComponent<VirtualButtonBehaviour> ().RegisterEventHandler (this);
+		vbBtnObjNatoo = GameObject.Find ("Natoobtn");
+		vbBtnObjNatoo.GetComponent<VirtualButtonBehaviour> ().RegisterEventHandler (this);
 		ballAni.GetComponent<Animator> ();
 	}
 	
