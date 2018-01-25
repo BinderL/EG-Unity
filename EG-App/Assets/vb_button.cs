@@ -1,16 +1,31 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Vuforia;
 
-public class vb_button : MonoBehaviour {
+public class vb_button : MonoBehaviour, IVirtualButtonEventHandler {
 
-	// Use this for initialization
-	void Start () {
-		
+	public GameObject vbBtnObj;
+	public Animator ballAni;
+
+
+	void Start () 
+	{
+		vbBtnObj = GameObject.Find ("Natoobtn");
+		vbBtnObj.GetComponent<VirtualButtonBehaviour>().RegisterEventHandler(this);
+		ballAni.GetComponent<Animator>();
+
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+
+
+	public void OnButtonPressed(VirtualButtonAbstractBehaviour vb)
+	{
+		ballAni.Play("ball_anim");
+		Debug.Log("ON");
+	}
+	public void OnButtonReleased(VirtualButtonAbstractBehaviour vb)
+	{
+		ballAni.Play("none");
+		Debug.Log("OFF");
 	}
 }

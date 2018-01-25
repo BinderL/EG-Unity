@@ -567,6 +567,10 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 939807363}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &946589442 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: 2a725225d3d981b4182014a2e20b501c, type: 2}
+  m_PrefabInternal: {fileID: 1911297247}
 --- !u!43 &1286148443
 Mesh:
   m_ObjectHideFlags: 0
@@ -806,6 +810,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 700841bc0213ccd4892765d4bcfc7f6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vbBtnObjNatoo: {fileID: 946589442}
+  ballAni: {fileID: 704708614}
 --- !u!1001 &1911297247
 Prefab:
   m_ObjectHideFlags: 0
