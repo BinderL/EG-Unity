@@ -5,13 +5,13 @@ using Vuforia;
 
 public class vb_anim_cube : MonoBehaviour, IVirtualButtonEventHandler {
 
-	public GameObject vbBtnObjAstro;
+	public GameObject vbBtnObjStar;
 	public Animator cubeAni;
 
 
 	void Start () {
-		vbBtnObjAstro = GameObject.Find ("Astrobtn");
-		vbBtnObjAstro.GetComponent<VirtualButtonBehaviour> ().RegisterEventHandler (this);
+		vbBtnObjStar = GameObject.Find ("Starbtn");
+		vbBtnObjStar.GetComponent<VirtualButtonBehaviour> ().RegisterEventHandler (this);
 		cubeAni.GetComponent<Animator> ();
 	}
 		
