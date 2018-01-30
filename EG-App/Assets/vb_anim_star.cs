@@ -1,13 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 using Vuforia;
 
-public class vb_anim_star : MonoBehaviour, IVirtualButtonEventHandler {
+public class Vb_anim_star : MonoBehaviour, IVirtualButtonEventHandler {
 
 	public GameObject vbBtnObjStar;
 	public Animator chesttopAni;
-
 	public bool active;
 
 
@@ -29,4 +29,21 @@ public class vb_anim_star : MonoBehaviour, IVirtualButtonEventHandler {
 		//chesttopAni.Play ("none");
 		Debug.Log ("OFF_SHIELD");
 	}
+
+    void OnSerializeNetworkView(BitStream stream, NetworkMessageInfo info)
+    {
+        Vector3 syncPosition = Vector3.zero;
+        if (stream.isWriting)
+        {
+            syncPosition = transform.position;
+            stream.Serialize(ref syncPosition);
+            Debug.Log("published chest transform");
+        }
+        else
+        {
+            stream.Serialize(ref syncPosition);
+            transform.position = syncPosition;
+            Debug.Log("published chest transform");
+        }
+    }
 }

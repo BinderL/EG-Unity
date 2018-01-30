@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="iconne" size="5.000000 6.812134" />
+    <ImageTarget name="astromarker" size="5.000000 8.642578" />
+    <ImageTarget name="HIRO_OMAE_WA_MU_SHINDERU" size="5.000000 5.005519" />
+  </Tracking>
+</QCARConfig>

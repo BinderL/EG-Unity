@@ -23,6 +23,8 @@ ExportedObj/
 *.svd
 *.pdb
 
+.vs/
+
 # Unity3D generated meta files
 *.pidb.meta
 
@@ -32,3 +34,10 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+EG-App/Assets/Resources/VuforiaConfiguration.asset
+EG-App/Assets/Resources/VuforiaConfiguration.asset.meta
+EG-App/Assets/vb_button.cs.meta
+EG-App/ProjectSettings/GraphicsSettings.asset
+EG-App/QCAR/somedata16
+EG-App/QCAR/somedata16
+EG-App/QCAR/somedata16

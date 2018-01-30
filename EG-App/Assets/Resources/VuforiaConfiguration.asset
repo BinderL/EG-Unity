@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: VuforiaConfiguration
   m_EditorClassIdentifier: 
   vuforia:
-    vuforiaLicenseKey: 
+    vuforiaLicenseKey: AVjUpqb/////AAAAmZeMjqLSQUeTiyiV1AyoxXMaPPm0FTHbFhhkb1gFSsgKR3XKdpXjYqZbeI0D5JoIk6w7Ivasrg/G01X7lQA/piaM6QmY+TJeGNwh+ZtwvF1gUkcAGcVTHmbGg2fiaQ9qgzi76q+inlFWsyTXdkGWgGGfZQ6KqY45kVQzEgo56FLcLpK2Ec5Z+GFCUJhtuIk6qIu5nwvAvXvfQAFQiCzPjrubzEzd9pqcDbiG+w9VV+A9iQFq4mRuqY8hR/4dsOrFRw/cTYBO95hjIcnJoyNqvmfUHraxa/f5+sJquLW3iUK6eZVBim8mNFjUL/OHzKuQ2T0vHgpd2nQxpcX8/AzzkG3i4PIqK7iM3eQI8spE6wN7
     delayedInitialization: 0
     cameraDeviceModeSetting: -1
     maxSimultaneousImageTargets: 1
@@ -43,8 +43,10 @@ MonoBehaviour:
       FieldOfView: {x: 0, y: 0, z: 0, w: 0}
       ContainsMagnet: 0
   databaseLoad:
-    dataSetsToLoad: []
-    dataSetsToActivate: []
+    dataSetsToLoad:
+    - QRcodes
+    dataSetsToActivate:
+    - QRcodes
   videoBackground:
     clippingMode: 0
     matteShader: {fileID: 4800000, guid: f84e93cca971cda47a225f4c6a4156c9, type: 3}
