@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Name: VuforiaConfiguration
   m_EditorClassIdentifier: 
   vuforia:
-    vuforiaLicenseKey: 
+    vuforiaLicenseKey: Ae2bMgL/////AAAAmaGHPk7r3UnXrPKO/S7aLFkEoR6Nuop2SYkDUz7f4r3VkpDNjm8yVY8ioA0FNz3CJD9f77oUf50boCxzxkSh/LF+d3AhL0Ld/UEZsaWfvF97Kha5nIKHgf32FYcYYsO99CNOBno2XwzUEt+05nEZTFKlIU9ahVZWjWHO5OEktRYkhMtUbcmWwo8pybKSkSkCjDDNbkBlglKfS4dvVxGuBZ7nVx8kPq3mU/p1StfMJfGIfbQ1Bypl7ejb0rHJf4f8U4+raZ4C0nfDPdfZoS3g0ooR1MSVPoR7JbISm8Ebq5+LctkrQsP12pdGdtkk39pUDwrJecuIZ5b7pqDrkbd8Nhcojz2TR8E83KFcBmP43ELQ
     delayedInitialization: 0
-    cameraDeviceModeSetting: -1
-    maxSimultaneousImageTargets: 1
-    maxSimultaneousObjectTargets: 1
+    cameraDeviceModeSetting: -3
+    maxSimultaneousImageTargets: 10
+    maxSimultaneousObjectTargets: 10
     useDelayedLoadingObjectTargets: 0
     cameraDirection: 0
     mirrorVideoBackground: 0
@@ -43,8 +43,10 @@ MonoBehaviour:
       FieldOfView: {x: 0, y: 0, z: 0, w: 0}
       ContainsMagnet: 0
   databaseLoad:
-    dataSetsToLoad: []
-    dataSetsToActivate: []
+    dataSetsToLoad:
+    - QRcodes
+    dataSetsToActivate:
+    - QRcodes
   videoBackground:
     clippingMode: 0
     matteShader: {fileID: 4800000, guid: f84e93cca971cda47a225f4c6a4156c9, type: 3}

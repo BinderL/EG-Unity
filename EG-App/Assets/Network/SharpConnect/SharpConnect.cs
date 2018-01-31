@@ -9,6 +9,8 @@ using System.IO;
 using System.Net.Sockets;
 using System.Text;
 using System.Collections;
+using UnityEngine;
+
 
 namespace SharpConnect
 {
@@ -32,13 +34,18 @@ namespace SharpConnect
                 pUserName = sUserName;
                 // The TcpClient is a subclass of Socket, providing higher level 
                 // functionality like streaming.
-                client = new TcpClient(sNetIP, PORT_NUM);
+                Debug.Log("ici");
+                client = new TcpClient();
+                Debug.Log("ici");
+                client.Connect(sNetIP, PORT_NUM);
+                Debug.Log("ici");
 
               
                 // Start an asynchronous read invoking DoRead to avoid lagging the user
                 // interface.
-                client.GetStream().BeginRead(readBuffer, 0, READ_BUFFER_SIZE, new AsyncCallback(DoRead), null);
+                //client.GetStream().BeginRead(readBuffer, 0, READ_BUFFER_SIZE, new AsyncCallback(DoRead), null);
                 // Make sure the window is showing before popping up connection dialog.
+                Debug.Log("ici");
 
                 //AttemptLogin(sUserName);
                 return "Connection Succeeded";
@@ -84,7 +91,9 @@ namespace SharpConnect
                 // Convert the byte array the message was saved into, minus two for the
                 // Chr(13) and Chr(10)
                 strMessage = Encoding.ASCII.GetString(readBuffer, 0, BytesRead - 2);
-                ProcessCommands(strMessage);
+
+                //ProcessCommands(strMessage);
+                res = "Communication";
                 // Start a new asynchronous read into readBuffer.
                 client.GetStream().BeginRead(readBuffer, 0, READ_BUFFER_SIZE, new AsyncCallback(DoRead), null);
 
