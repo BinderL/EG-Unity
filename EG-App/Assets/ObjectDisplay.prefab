@@ -37,8 +37,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4206952274253790}
-  - component: {fileID: 114422050383037136}
-  - component: {fileID: 114689824541602950}
   m_Layer: 0
   m_Name: chest
   m_TagString: Untagged
@@ -94,7 +92,7 @@ GameObject:
   - component: {fileID: 114207421684472498}
   m_Layer: 0
   m_Name: Leafbtn
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -112,7 +110,7 @@ GameObject:
   - component: {fileID: 95040432626676374}
   m_Layer: 0
   m_Name: chesttop
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -128,7 +126,6 @@ GameObject:
   - component: {fileID: 114737818657462534}
   - component: {fileID: 114985122490143832}
   - component: {fileID: 114316600494018390}
-  - component: {fileID: 114430699507873248}
   - component: {fileID: 114922439823258126}
   - component: {fileID: 114886930582970586}
   m_Layer: 0
@@ -488,52 +485,6 @@ MonoBehaviour:
   msg: 
   time: 
   solution: 
---- !u!114 &114422050383037136
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1312255699573526}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SceneId:
-    m_Value: 0
-  m_AssetId:
-    i0: 204
-    i1: 10
-    i2: 112
-    i3: 19
-    i4: 139
-    i5: 86
-    i6: 174
-    i7: 180
-    i8: 58
-    i9: 161
-    i10: 206
-    i11: 224
-    i12: 230
-    i13: 18
-    i14: 176
-    i15: 139
-  m_ServerOnly: 0
-  m_LocalPlayerAuthority: 1
---- !u!114 &114430699507873248
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1966396736823228}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2f1ad137655d334aa90a04a8b71645b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  vbBtnObjLeaf: {fileID: 1521387858879042}
-  chesttopAni: {fileID: 95040432626676374}
-  active: 0
 --- !u!114 &114473915859994608
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -566,27 +517,6 @@ MonoBehaviour:
     e32: 0
     e33: 1
   mPrevParent: {fileID: 1966396736823228}
---- !u!114 &114689824541602950
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1312255699573526}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_TransformSyncMode: 1
-  m_SendInterval: 0.1
-  m_SyncRotationAxis: 7
-  m_RotationSyncCompression: 0
-  m_SyncSpin: 0
-  m_MovementTheshold: 0.001
-  m_VelocityThreshold: 0.0001
-  m_SnapThreshold: 5
-  m_InterpolateRotation: 1
-  m_InterpolateMovement: 1
 --- !u!114 &114737818657462534
 MonoBehaviour:
   m_ObjectHideFlags: 1
