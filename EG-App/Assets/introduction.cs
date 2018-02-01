@@ -4,11 +4,11 @@ using Vuforia;
 
 public class introduction : MonoBehaviour {
 
-    public float time_wait=10;
+    public float time_wait=5;
 
 	// Use this for initialization
 	void Start () {
-       // StartCoroutine(Wait_scene(time_wait));
+       StartCoroutine(Wait_scene(time_wait));
 
     }
 
@@ -17,12 +17,12 @@ public class introduction : MonoBehaviour {
         
     }
 
-    /* private IEnumerator Wait_scene(float seconds)
-     {
-         
-         yield return new WaitForSeconds(seconds);
+    private IEnumerator Wait_scene(float seconds)
+    {
 
-         UnityEngine.SceneManagement.SceneManager.LoadScene("Main");
+        yield return new WaitForSeconds(seconds);
 
-    }*/
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Main");
+
+    }
 }

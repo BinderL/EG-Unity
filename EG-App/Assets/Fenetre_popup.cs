@@ -38,7 +38,7 @@ public class Fenetre_popup : MonoBehaviour {
 
     //private WaitTimer clock;
     public Canvas affichage_popup_Rules;
-
+    
 
 
     // Use this for initialization
@@ -53,16 +53,17 @@ public class Fenetre_popup : MonoBehaviour {
     void Update()
     {
         //touch the screen to enable visible game object
-        if (Input.touchCount > 0)
+        if (Input.touchCount > 2)
         {
             if (affichage_popup_Rules.enabled == false)
             {
-                Debug.Log("affichage popup");
+                Debug.Log("popup");
                 affichage_popup_Rules.enabled = true;
+                //TouchScreenKeyboard.Open();
             }
             else
             {
-                Debug.Log("not affichage popup");
+                Debug.Log("not popup");
                 affichage_popup_Rules.enabled = false;
             }
         }
@@ -79,16 +80,16 @@ public class Fenetre_popup : MonoBehaviour {
         //        }
         //    }
 
-        //}
+            //}
 
-        //touch the screen for detecting position of the screen
-        //if (Input.touchCount > 0)
-        //{
-        //    foreach (Touch touch in Input.touches)
-        //    {
-        //        Debug.Log(touch.position);
-        //    }
-        //}
+            //touch the screen for detecting position of the screen
+            //if (Input.touchCount > 0)
+            //{
+            //    foreach (Touch touch in Input.touches)
+            //    {
+            //        Debug.Log(touch.position);
+            //    }
+            //}
 
     }
 }
