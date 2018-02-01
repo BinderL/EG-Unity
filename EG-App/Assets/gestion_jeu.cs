@@ -11,6 +11,7 @@ public class gestion_jeu : Singleton<gestion_jeu> {
 
     public void Start()
     {
+       // affichage_popup.transform.
         affichage_popup.enabled = false;
 
     }
