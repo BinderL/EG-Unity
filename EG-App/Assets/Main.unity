@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.5748171, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1979,7 +1979,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d47f3b1ccf0387345b0ac4b32ca11d99, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 45bcc7f3d02cbbf479556c7d8c12dad1, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.08
   m_Pitch: 1
@@ -2601,7 +2601,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1248641590}
   - component: {fileID: 1248641589}
-  - component: {fileID: 1248641593}
   - component: {fileID: 1248641592}
   - component: {fileID: 1248641591}
   - component: {fileID: 1248641594}
@@ -2671,18 +2670,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1248641588}
---- !u!114 &1248641593
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1248641588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bdc9e1ae7741d6242a3956721680f36e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreText: {fileID: 1248641591}
 --- !u!114 &1248641594
 MonoBehaviour:
   m_ObjectHideFlags: 0
