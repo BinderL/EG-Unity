@@ -7,19 +7,24 @@ public class TimeManager : MonoBehaviour
 {
 
     public GUIText scoreText;
-    private float time_Begin;
+    public float time_Begin;
     private float time_rest;
+    private float time_rest_a;
+    private float time_refresh;
+    private Rect labelRect = new Rect(350, 10, 150, 100);
+    private bool loose;
     void Start()
     {
-        time_Begin = 1500;
-        time_rest = 0;
+        loose = false;
+        time_Begin = 10;
+        time_rest = time_Begin;
         Updatetime();
-    }
+        time_refresh = 0.5f;    }
 
-    void Update()
+    private IEnumerator Wait_timetodisplay(float seconds)
     {
 
-        time_Begin -= Time.deltaTime;
+        yield return new WaitForSeconds(seconds);
 
         if (time_Begin <= 0.0f)
         {
@@ -32,9 +37,16 @@ public class TimeManager : MonoBehaviour
 
     }
 
-    void TimerEnded()
+    void Update()
     {
-        //Launch the lose screen.
+
+        time_Begin -= Time.deltaTime;
+        StartCoroutine(Wait_timetodisplay(time_refresh));
+    }
+
+    private void TimerEnded()
+    {
+        loose = true;
     }
 
     public void Addtime(float time)
@@ -43,8 +55,23 @@ public class TimeManager : MonoBehaviour
         Updatetime();
     }
 
-    void Updatetime()
+    private void Updatetime()
     {
         scoreText.text = "Time: " + time_rest;
+        
+    }
+
+    private void OnGUI()
+    {
+        time_rest_a = RoundValue(time_rest, 1f);
+        if (!loose)
+            GUI.Label(labelRect, "time" + time_rest_a);
+        else
+            GUI.Label(labelRect, "Game Over");
+    }
+
+    public static float RoundValue(float num, float precision)
+    {
+        return Mathf.Floor(num * precision + 0.5f) / precision;
     }
 }

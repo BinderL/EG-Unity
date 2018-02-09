@@ -16,7 +16,7 @@ namespace Vuforia
     {
         #region PRIVATE_MEMBER_VARIABLES
  
-        private TrackableBehaviour mTrackableBehaviour;
+        public TrackableBehaviour mTrackableBehaviour;
     
         #endregion // PRIVATE_MEMBER_VARIABLES
 

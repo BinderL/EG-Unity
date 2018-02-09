@@ -1950,6 +1950,7 @@ GameObject:
   m_Component:
   - component: {fileID: 790334513}
   - component: {fileID: 790334514}
+  - component: {fileID: 790334515}
   m_Layer: 0
   m_Name: Musique Player
   m_TagString: Untagged
@@ -2050,6 +2051,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &790334515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 790334512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 441992fbc8544644ea7a57d5e572c5eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chest: {fileID: 0}
+  Zelda: {fileID: 0}
+  mDefaultTrackableEventHandler: {fileID: 0}
 --- !u!21 &797013818
 Material:
   serializedVersion: 6
