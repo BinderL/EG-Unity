@@ -22,7 +22,7 @@ public class introduction : MonoBehaviour {
 
         yield return new WaitForSeconds(seconds);
 
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Main");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Menu_Live");
 
     }
 }
